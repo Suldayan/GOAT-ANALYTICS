@@ -17,13 +17,13 @@ public class GatewayConfig {
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("cars-service", r -> r.path("/cars/**")
+                .route("item-service", r -> r.path("/item/**")
                         .filters(f -> f.filter(filter))
-                        .uri("lb://cars-service"))
+                        .uri("lb://item-service"))
 
-                .route("auth-service", r -> r.path("/auth/**")
+                .route("email-service", r -> r.path("/email/**")
                         .filters(f -> f.filter(filter))
-                        .uri("lb://auth-service"))
+                        .uri("lb://email-service"))
                 .build();
     }
 }

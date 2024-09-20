@@ -1,15 +1,13 @@
-package com.example.gateway;
+package com.example.selenium;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
-@EnableEurekaClient
-public class GatewayApplication {
+public class SeleniumApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GatewayApplication.class, args);
+		SpringApplication.run(SeleniumApplication.class, args);
 	}
 
 }
