@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>selenium-kafka-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>selenium-kafka-service</name>
+	<name>selenium-service</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

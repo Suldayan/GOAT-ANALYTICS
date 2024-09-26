@@ -33,6 +33,10 @@ class WebScrapeServiceTest {
 
         String itemName = webscrapeService.getItemName(1);
         String itemPrice = webscrapeService.getItemPrice(1);
+        String itemRetailPrice = webscrapeService.getItemRetailPrice(1);
+        String itemLink = webscrapeService.getItemLink(1);
+        String itemImg = webscrapeService.getItemImage(1);
+        String itemReleaseDate = webscrapeService.getItemReleaseDate(1);
 
         // TO-DO: fix the route to get the item description
         String itemDesc = webscrapeService.getItemDescription(1);
@@ -40,6 +44,10 @@ class WebScrapeServiceTest {
         assertNotNull(itemName);
         System.out.println("Item name: " + itemName);
         System.out.println("Item price: " + itemPrice);
+        System.out.println("Item retail price: " + itemRetailPrice);
+        System.out.println("Item link: " + itemLink);
+        System.out.println("Item Image: " + itemImg);
+        System.out.println("Item Release Date: " + itemReleaseDate);
         System.out.println("Item description: " + itemDesc);
     }
 }

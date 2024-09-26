@@ -99,6 +99,7 @@ public class WebscrapeService {
         }
     }
 
+    // TO-DO: fix path to get item description
     public String getItemDescription(int position) {
         String itemLink = getItemLink(position);
         String currentUrl = webDriver.getCurrentUrl();
