@@ -53,7 +53,7 @@ const Login: React.FC = () => {
             >
                 <div>
                     <h1 className="mt-6 text-center text-5xl font-bold text-white tracking-tight">
-                        SSENSE
+                        GOAT
                     </h1>
                     <h2 className="mt-2 text-center text-xl text-gray-400 uppercase tracking-widest">
                         Analytics Login
@@ -110,7 +110,7 @@ const Login: React.FC = () => {
                 </form>
                 
                 <p className="mt-2 text-center text-sm text-gray-600">
-                    By signing in, you agree to SSENSE's{' '}
+                    By signing in, you agree to GOAT's{' '}
                     <a href="#" className="font-medium text-white hover:text-gray-200">
                         Terms of Service
                     </a>{' '}

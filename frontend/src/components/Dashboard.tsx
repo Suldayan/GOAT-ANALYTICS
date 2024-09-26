@@ -14,7 +14,7 @@ const Dashboard: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold mb-8">SSENSE Analytics Dashboard</h1>
+            <h1 className="text-4xl font-bold mb-8">GOAT Analytics Dashboard</h1>
             {userLoggedIn && currentUser ? (
                 <div className="text-center">
                     <p className="text-2xl mb-4">

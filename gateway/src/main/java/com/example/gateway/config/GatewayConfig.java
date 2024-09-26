@@ -6,6 +6,7 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import reactor.netty.http.client.HttpClient;
 
 @Configuration
 @EnableHystrix
@@ -16,6 +17,7 @@ public class GatewayConfig {
 
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
+
         return builder.routes()
                 .route("item-service", r -> r.path("/item/**")
                         .filters(f -> f.filter(filter))
