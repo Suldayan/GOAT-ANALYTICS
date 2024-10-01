@@ -21,6 +21,7 @@ public class RouterValidator {
     public static final List<String> openApiEndpoints = List.of(
             "/item/graph-analytics",
             "/item/metadata"
+
     );
 
     public Predicate<ServerHttpRequest> isSecured =
