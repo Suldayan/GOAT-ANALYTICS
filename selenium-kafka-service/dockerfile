@@ -1,0 +1,6 @@
+FROM eclipse-temurin:21
+RUN mkdir /opt/app
+COPY target/goat-analysis-selenium.jar /opt/app
+WORKDIR /opt/app
+EXPOSE 8082
+CMD ["java", "-jar", "/opt/app/goat-analysis-selenium.jar"]

@@ -11,10 +11,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.*;
 
 @Profile("!gird")
 @Lazy
@@ -22,6 +19,7 @@ import org.springframework.context.annotation.Profile;
 public class WebDriverConfig {
     @ConditionalOnProperty(name = "browser", havingValue = "firefox")
     @Primary
+    @Bean
     public WebDriver firefoxDriver() {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         Proxy proxy = new Proxy();
@@ -32,6 +30,7 @@ public class WebDriverConfig {
 
     @ConditionalOnProperty(name = "browser", havingValue = "chrome")
     @Primary
+    @Bean
     public WebDriver chromeDriver() {
         ChromeOptions chromeOptions = new ChromeOptions();
         Proxy proxy = new Proxy();
@@ -42,6 +41,7 @@ public class WebDriverConfig {
 
     @ConditionalOnProperty(name = "browser", havingValue = "edge")
     @Primary
+    @Bean
     public WebDriver edgeDriver() {
         EdgeOptions edgeOptions = new EdgeOptions();
         Proxy proxy = new Proxy();
@@ -52,6 +52,7 @@ public class WebDriverConfig {
 
     @ConditionalOnProperty(name = "browser", havingValue = "safari")
     @Primary
+    @Bean
     public WebDriver safariDriver() {
         SafariOptions safariOptions = new SafariOptions();
         Proxy proxy = new Proxy();

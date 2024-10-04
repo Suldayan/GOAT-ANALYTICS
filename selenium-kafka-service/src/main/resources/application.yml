@@ -1,3 +1,30 @@
-spring.application.name=selenium-kafka-service
-server.port=8081
-System.setProperty=edge
+spring:
+  application:
+    name:
+      selenium-kafka-service
+server:
+  port: 8082
+
+browser: edge
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      kafkaService:
+        registerHealthIndicator: true
+        slidingWindowSize: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        minimumNumberOfCalls: 5
+        waitDurationInOpenState: 10s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+  retry:
+    instances:
+      kafkaService:
+        maxAttempts: 3
+        waitDuration: 500ms
+  ratelimiter:
+    instances:
+      kafkaService:
+        limitForPeriod: 10
+        limitRefreshPeriod: 1s

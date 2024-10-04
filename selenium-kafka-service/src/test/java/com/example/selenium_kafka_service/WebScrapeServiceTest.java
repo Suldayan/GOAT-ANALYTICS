@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -22,14 +23,14 @@ class WebScrapeServiceTest {
 
     @BeforeEach
     void setup() {
-        driver = new ChromeDriver();
+        driver = new EdgeDriver();
 
         webscrapeService = new WebscrapeService(driver);
     }
 
     @Test
     void testGetItemName() {
-        webscrapeService.navigateToSearchPage("essentials");
+        webscrapeService.navigateToSearchPage("jordan 4 military black");
 
         String itemName = webscrapeService.getItemName(1);
         String itemPrice = webscrapeService.getItemPrice(1);
