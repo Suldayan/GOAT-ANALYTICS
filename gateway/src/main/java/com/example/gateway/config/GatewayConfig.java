@@ -18,24 +18,9 @@ public class GatewayConfig {
     public RouteLocator routes(RouteLocatorBuilder builder) {
 
         return builder.routes()
-                .route("selenium-kafka-service", r -> r.path("/selenium/**")
-                        .filters(f -> f.circuitBreaker(config -> config
-                                .setName("myCircuitBreaker")
-                                .setFallbackUri("forward:/fallback")))
-                        .uri("http://localhost:8081"))
-
-                .route("kafka-service", r -> r.path("/kafka/**")
-                        .filters(f -> f.circuitBreaker(config -> config
-                                .setName("myCircuitBreaker")
-                                .setFallbackUri("forward:/fallback")))
-                        .uri("http://localhost:8082"))
-
-                /*
-                TODO: create the user microservice
                 .route("user-service", r -> r.path("/user/**")
                         .filters(f -> f.filter(filter))
                         .uri("http://localhost:8083"))
-                */
                 .build();
     }
 }
